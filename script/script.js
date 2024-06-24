@@ -53,12 +53,12 @@ var x = setInterval(function () {
     return `<span style='font-size: 6vw !important; background: transparent !important;'>${el} </span>`
   }
 
-  // document.getElementById("count").innerHTML = days + span("d") + hours + span("h") + minutes + span("m") + seconds + span("s");
+  document.getElementById("count").innerHTML = days + span("d") + hours + span("h") + minutes + span("m") + seconds + span("s");
 
-  // if (distance < 0) {
-  //   clearInterval(x);
-  //   document.getElementById("count").innerHTML = "EXPIRED";
-  // }
+  if (distance < 0) {
+  clearInterval(x);
+  document.getElementById("count").innerHTML = "EXPIRED";
+  }
 }, 1000);
 
 particlesJS.load("particles-js", "particlesjs-config.json", () => {
