@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Colosseum</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0NV5DSDE1Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-0NV5DSDE1Q');
+    </script>
+
+    <link rel="stylesheet" href="style/events.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/icon.png" />
+
+    <script src="script/particles.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script
+      src="https://kit.fontawesome.com/ff4ca865d9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header
+      class="navbar text-gray-400 bg-gray-1000 body-font"
+      style="z-index: 20 !important"
+    >
+      <div
+        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+      >
+        <a
+          class="flex title-font font-medium items-center text-white mb-4 md:mb-0"
+        >
+          <img src="./assets/logo.png" width="50rem" />
+          <span class="ml-3 text-xl" style="text-shadow: 0 0 2rem #fff"
+            >E-Colosseum 23</span
+          >
+        </a>
+        <nav
+          class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+        >
+          <a class="tab mr-5 hover:text-white" href="index.html"><p>Home</p></a>
+          <a class="tab mr-5 hover:text-white" href="javascript:void(0)"
+            ><p class="current">Events</p></a
+          >
+        <button
+          class="tab marine inline-flex bg- text-white border-0 py-2 px-6 focus:outline-none"
+          style="z-index: 2"
+          onclick="window.scrollTo(0, document.body.scrollHeight)"
+        >
+          Contact us
+        </button>
+      </nav>
+      </div>
+    </header>
+
+    <center class="background">
+      <p id="count" style="letter-spacing: 2rem">EVENTS</p>
+    </center>
+
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="main flex flex-wrap -m-4"></div>
+      </div>
+    </section>
+
+    <footer class="text-gray-400 bg-purple-1000 body-font">
+      <div
+        class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"
+      >
+        <a
+          class="flex title-font font-medium items-center md:justify-start justify-center text-white"
+        >
+          <img src="./assets/logo.png" width="50rem" />
+          <span class="ml-3 text-xl">E-Colosseum</span>
+        </a>
+        <p
+          class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4"
+        >
+          © 2023 —
+          <a class="text-gray-500 ml-1" rel="noopener noreferrer"
+            >DAV Public School Sec-49 Gurugram</a
+          >
+        </p>
+        <span
+          class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
+        >
+          <a
+            class="icon text-gray-400"
+            href="https://dav49gurugram.org/"
+            target="_blank"
+          >
+            <i class="fa-solid fa-globe"></i>
+          </a>
+          <a
+            class="icon px-3 text-gray-400"
+            href="https://mail.google.com/mail/?view=cm&to=ecolosseum23@gmail.com"
+            target="_blank"
+          >
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+          <a
+            class="icon text-gray-400"
+            href="https://m.facebook.com/davpssec49gurugram"
+            target="_blank"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a
+            class="icon ml-3 text-gray-400"
+            href="https://www.instagram.com/ecolosseum23/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-instagram fa-lg"></i>
+          </a>
+        </span>
+      </div>
+    </footer>
+    <script src="script/event.js"></script>
+  </body>
+</html>

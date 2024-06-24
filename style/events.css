@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fira+Mono:400");
+
+* {
+  font-family: "Chivo Mono", monospace;
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.8), 
+    rgba(0, 0, 0, 0.8)
+  ), url("https://media.tenor.com/aR-pX0-tkw8AAAAC/tech.gif");
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #a0fcf4;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #cee6e4;
+}
+
+.navbar.scroll {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.current {
+  color: #fff;
+  text-shadow: 0 0 2rem #ffffff;
+}
+a.tab {
+  transition: 0.1s ease-in-out;
+}
+a.tab:hover {
+  border-bottom: 0.1rem solid #fff;
+}
+
+.background {
+  z-index: 5 !important;
+  background: transparent !important;
+}
+
+.marine {
+  background-color: #6dc2be;
+  border-radius: 0.7rem;
+  transition: 0.2s ease;
+  color: #000 !important;
+}
+.marine:hover {
+  background-color: #03b5d4;
+  box-shadow: 0 0 2rem #94f5f5;
+  color: #fff !important;
+}
+
+.icon:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.card {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  box-shadow: 0.2rem 0.2rem 0.5rem #202020;
+}
+
+.card:hover {
+  box-shadow: 0 0 0.5rem #24ccff;
+}
+
+#count {
+  color: rgb(213, 235, 236);
+  font-size: 7vw;
+  text-shadow: 0 0 1rem #00ffea, 0 0 4rem rgb(0, 255, 255);
+  background-color: transparent;
+  position: relative;
+  z-index: 1000 !important;
+  user-select: none !important;
+}
+
+.background {
+  z-index: 5 !important;
+  background: transparent !important;
+}
