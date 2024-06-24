@@ -159,7 +159,7 @@ const events = [
     description:
       "Students ignite innovation with tech-driven business pitches aligned to Sustainable Development Goals (SDGs), shaping a sustainable future with global impact.",
     banner:
-      "https://i0.wp.com/ohmybot.net/wp-content/uploads/2020/03/chatbot-banner.png?ssl=1",
+      "https://soutienaerrideluca.net/wp-content/uploads/2017/09/entrepreneurship.jpg",
     participants: 4,
     url: "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAHf2GwRUMEYwRkNGQlZIS09RU0k4R0w0VlAxWkhDMS4u",
   },
