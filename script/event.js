@@ -190,7 +190,7 @@ const events = [
       "Show off your flow of ideas via your moves and let the world recognise your talent",
     banner:
       "https://i.ytimg.com/vi/Zfsg3oiPXGc/maxresdefault.jpg",
-    participants: "8-10",
+    participants: "5",
     url: "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAHf2GwRUMUk3T0VVSTVMN05FWkJGVFowM0dJR01VSS4u",
   },
   {
