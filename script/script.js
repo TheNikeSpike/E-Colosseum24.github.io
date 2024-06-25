@@ -57,7 +57,8 @@ var x = setInterval(function () {
 
   if (distance < 0) {
   clearInterval(x);
-  document.getElementById("count").innerHTML = "EXPIRED";
+  document.getElementById("count").style.display= "none";
+  document.getElementById("debug").style.display= "block";
   }
 }, 1000);
 
