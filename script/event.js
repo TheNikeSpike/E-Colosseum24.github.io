@@ -26,7 +26,7 @@ function addCard(name, eligibility, description, banner, participants, url) {
     </p>
     <div class="flex items-center flex-wrap">
       <a
-        class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
+        class="text-purple-600 inline-flex items-center md:mb-2 lg:mb-0"
         >Register Now
         <svg
           class="w-4 h-4 ml-2"
