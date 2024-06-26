@@ -22,11 +22,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #a0fcf4;
+  background-color: #8d3cdd;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background-color: #cee6e4;
+  background-color: #c492f5;
 }
 
 .navbar.scroll {
@@ -50,13 +50,13 @@ a.tab:hover {
 }
 
 .marine {
-  background-color: #6dc2be;
+  background-color: #a568ea;
   border-radius: 0.7rem;
   transition: 0.2s ease;
   color: #000 !important;
 }
 .marine:hover {
-  background-color: #03b5d4;
+  background-color: #7e2add;
   box-shadow: 0 0 2rem #94f5f5;
   color: #fff !important;
 }
@@ -74,13 +74,13 @@ a.tab:hover {
 }
 
 .card:hover {
-  box-shadow: 0 0 0.5rem #24ccff;
+  box-shadow: 0 0 0.5rem #953df8;
 }
 
 #count {
-  color: rgb(213, 235, 236);
+  color: rgb(141,60,221);
   font-size: 7vw;
-  text-shadow: 0 0 1rem #00ffea, 0 0 4rem rgb(0, 255, 255);
+  text-shadow: 0 0 1rem #00ffea, 0 0 4rem rgb(153,99,214);
   background-color: transparent;
   position: relative;
   z-index: 1000 !important;
