@@ -38,29 +38,39 @@ let flick = function() {
 
 }
 
-var countDownDate = new Date('July 15, 2024 09:00:00').getTime();
+// Target date in UTC
+var countDownDate = new Date('July 15, 2024 09:00:00 UTC').getTime();
 
 var x = setInterval(function () {
   var now = new Date().getTime();
+
+  // Difference in milliseconds
   var distance = countDownDate - now;
 
+  // Convert the difference to days, hours, minutes, seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+  // Function to format the countdown display
   function span(el) {
     return `<span style='font-size: 6vw !important; background: transparent !important;'>${el} </span>`
   }
 
-  document.getElementById("count").innerHTML = days + span("d") + hours + span("h") + minutes + span("m") + seconds + span("s");
+  // Display the countdown adjusted to IST
+  var IST_offset = 5.5 * 60 * 60 * 1000; // Offset in milliseconds for IST (UTC+5:30)
+  var istTime = new Date(now + IST_offset);
+  document.getElementById("count").innerHTML = days + span("d") + istTime.getUTCHours() + span("h") + istTime.getUTCMinutes() + span("m") + istTime.getUTCSeconds() + span("s");
 
+  // When countdown timer reaches zero
   if (distance < 0) {
-  clearInterval(x);
-  document.getElementById("count").style.display= "none";
-  document.getElementById("debug").style.display= "block";
+    clearInterval(x);
+    document.getElementById("count").style.display = "none";
+    document.getElementById("debug").style.display = "block";
   }
 }, 1000);
+
 
 particlesJS.load("particles-js", "particlesjs-config.json", () => {
   console.log("Particles.js config loaded!");
