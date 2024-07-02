@@ -38,45 +38,32 @@ let flick = function() {
 
 }
 
-// Targ
 // Target date in UTC
-var countDownDate = new Date('July 2, 2024 20:53:00 UTC').getTime();
+var countDownDate = new Date('July 2, 2024 20:55:00 UTC').getTime();
 
-var x = setInterval(function () {
+var x = setInterval(function() {
   var now = new Date().getTime();
   var distance = countDownDate - now;
 
-  // Ensure distance is positive
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("count").style.display = "none";
-    document.getElementById("debug").style.display = "block";
+    document.getElementById("count").style.display = "none"; // Hide countdown
+    document.getElementById("debug_show").style.display = "block"; // Show debug button
+    return;
   }
-}, 1000);
 
-  // Calculate days, hours, minutes, seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Function to format the countdown display
-  function formatTime(unit, label) {
-    return `${unit.toString().padStart(2, '0')} ${label} `;
-  }
+  // Format with leading zeros if needed
+  var hoursStr = hours < 10 ? "0" + hours : hours;
+  var minutesStr = minutes < 10 ? "0" + minutes : minutes;
+  var secondsStr = seconds < 10 ? "0" + seconds : seconds;
 
-  var countdownDisplay = formatTime(days, 'day') +
-                         formatTime(hours, 'hour') +
-                         formatTime(minutes, 'minute') +
-                         formatTime(seconds, 'second');
-
-  document.getElementById("count").innerHTML = countdownDisplay.trim();
+  document.getElementById("count").innerHTML = hoursStr + " hours " + minutesStr + " minutes " + secondsStr + " seconds";
 
 }, 1000);
-
-
-  // When countdown timer reaches zero
-
 
 
 particlesJS.load("particles-js", "particlesjs-config.json", () => {
