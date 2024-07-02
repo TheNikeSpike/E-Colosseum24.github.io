@@ -38,38 +38,45 @@ let flick = function() {
 
 }
 
+// Targ
 // Target date in UTC
-var countDownDate = new Date('July 02, 2024 20:47:00 UTC').getTime();
+var countDownDate = new Date('July 2, 2024 20:47:00 UTC').getTime();
 
 var x = setInterval(function () {
   var now = new Date().getTime();
-
-  // Difference in milliseconds
   var distance = countDownDate - now;
 
-  // Convert the difference to days, hours, minutes, seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Function to format the countdown display
-  function span(el) {
-    return `<span style='font-size: 6vw !important; background: transparent !important;'>${el} </span>`
-  }
-
-  // Display the countdown adjusted to IST
-  var IST_offset = 5.5 * 60 * 60 * 1000; // Offset in milliseconds for IST (UTC+5:30)
-  var istTime = new Date(now + IST_offset);
-  document.getElementById("count").innerHTML = days + span("d") + istTime.getUTCHours() + span("h") + istTime.getUTCMinutes() + span("m") + istTime.getUTCSeconds() + span("s");
-
-  // When countdown timer reaches zero
+  // Ensure distance is positive
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("count").style.display = "none";
     document.getElementById("debug").style.display = "block";
   }
 }, 1000);
+
+  // Calculate days, hours, minutes, seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Function to format the countdown display
+  function formatTime(unit, label) {
+    return `${unit.toString().padStart(2, '0')} ${label} `;
+  }
+
+  var countdownDisplay = formatTime(days, 'day') +
+                         formatTime(hours, 'hour') +
+                         formatTime(minutes, 'minute') +
+                         formatTime(seconds, 'second');
+
+  document.getElementById("count").innerHTML = countdownDisplay.trim();
+
+}, 1000);
+
+
+  // When countdown timer reaches zero
+
 
 
 particlesJS.load("particles-js", "particlesjs-config.json", () => {
