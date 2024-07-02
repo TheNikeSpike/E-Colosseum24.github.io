@@ -39,7 +39,7 @@ let flick = function() {
 }
 
 // Target date in UTC
-var countDownDate = new Date('July 15, 2024 09:00:00 UTC').getTime();
+var countDownDate = new Date('July 02, 2024 20:47:00 UTC').getTime();
 
 var x = setInterval(function () {
   var now = new Date().getTime();
